@@ -8,7 +8,13 @@ y = data[['zs_weight_age',
 	 'zs_height_age',
 	 'zs_weight_height',
      'totalzs_3',
-	 'totalzs_percentage']] #float
+	 'totalzs_percentage']] #all float
+## zs_weight_age, zs_height_age, zs_weight_height: Z-score gizi berdasarkan Age, Gender, Weight, Height 
+(-3 < zscore < +3)
+## totalzs_3: rata-rata dari tiga nilai zs 
+(-3 < mean total zscore(mtz) < +3) (Kurang Gizi = mtz < -1 (misal=-1.1) , Obesitas = mtz > +1 (misal=+1.3), Gizi normal = -1 < mtz < +1 (misal: +0.6)
+## totalzs_percentage: hasil transform nilai mtz ke persentase(%)
+(100% < zscore < 100%)
 # def GenderEncode
 def genderEncode(gender, age, weight, height):
 
